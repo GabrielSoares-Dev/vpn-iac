@@ -3,6 +3,6 @@ data "aws_ami" "open_vpn_ami" {
 
   filter {
     name   = "name"
-    values = ["OpenVPN Access Server Community Image-fe8020db-5343-4c43-9e65-5ed4a825c931ami-06e5a963b2dadea6f"]
+    values = ["ami-0ddda618e961f2270 (64 bits (x86), uefi-preferred) / ami-09d190d2c3c5b16e6 (64 bits (Arm), uefi)"]
   }
 }
