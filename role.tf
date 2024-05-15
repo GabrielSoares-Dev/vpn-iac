@@ -22,7 +22,6 @@ resource "aws_iam_role" "openvpn_instance_role" {
                 "ssm:UpdateInstanceAssociationStatus",
                 "ssm:UpdateInstanceInformation"
             ],
-            Resource = "*"
         },
         {
             Effect = "Allow",
@@ -32,7 +31,6 @@ resource "aws_iam_role" "openvpn_instance_role" {
                 "ssmmessages:OpenControlChannel",
                 "ssmmessages:OpenDataChannel"
             ],
-            Resource = "*"
         },
         {
             Effect = "Allow",
