@@ -1,11 +1,11 @@
 resource "aws_iam_role" "openvpn_instance_role" {
   name = "openvpn_instance_role"
   assume_role_policy = jsonencode({
-    "Version": "2012-10-17",
-    "Statement": [
+    Version = "2012-10-17",
+    Statement = [
         {
-            "Effect": "Allow",
-            "Action": [
+            Effect = "Allow",
+            Action = [
                 "ssm:DescribeAssociation",
                 "ssm:GetDeployablePatchSnapshotForInstance",
                 "ssm:GetDocument",
@@ -22,21 +22,21 @@ resource "aws_iam_role" "openvpn_instance_role" {
                 "ssm:UpdateInstanceAssociationStatus",
                 "ssm:UpdateInstanceInformation"
             ],
-            "Resource": "*"
+            Resource = "*"
         },
         {
-            "Effect": "Allow",
-            "Action": [
+            Effect = "Allow",
+            Action = [
                 "ssmmessages:CreateControlChannel",
                 "ssmmessages:CreateDataChannel",
                 "ssmmessages:OpenControlChannel",
                 "ssmmessages:OpenDataChannel"
             ],
-            "Resource": "*"
+            Resource = "*"
         },
         {
-            "Effect": "Allow",
-            "Action": [
+            Effect = "Allow",
+            Action = [
                 "ec2messages:AcknowledgeMessage",
                 "ec2messages:DeleteMessage",
                 "ec2messages:FailMessage",
@@ -44,7 +44,7 @@ resource "aws_iam_role" "openvpn_instance_role" {
                 "ec2messages:GetMessages",
                 "ec2messages:SendReply"
             ],
-            "Resource": "*"
+            Resource = "*"
         }
     ]
   })
