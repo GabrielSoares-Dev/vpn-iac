@@ -7,3 +7,4 @@ resource "aws_security_group" "security_group_openvpn" {
     Name = "security_group_openvpn"
   }
 }
+

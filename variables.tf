@@ -48,3 +48,21 @@ variable "ingress_rules" {
   
   }
 }
+
+variable "egress_rules" { 
+  type = map(object({
+    name              = string
+    from_port         = number
+    to_port           = number
+    ip_protocol       = string
+  }))
+
+  default = {
+    all_trafic = {
+      name              = "all_trafic"
+      from_port         = 0
+      to_port           = 22
+      ip_protocol       = "-1"
+   }
+  }
+}
