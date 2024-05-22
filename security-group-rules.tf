@@ -13,7 +13,7 @@ resource "aws_vpc_security_group_ingress_rule" "ingress_rules" {
 }
 
 
-resource "aws_vpc_security_group_egress_rule" "example" {
+resource "aws_vpc_security_group_egress_rule" "egress_rules" {
   for_each          = var.egress_rules
   security_group_id = aws_security_group.security_group_openvpn.id
 

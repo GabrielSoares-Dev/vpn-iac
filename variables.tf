@@ -61,7 +61,7 @@ variable "egress_rules" {
     all_trafic = {
       name              = "all_trafic"
       from_port         = 0
-      to_port           = 22
+      to_port           = 65535
       ip_protocol       = "-1"
    }
   }
