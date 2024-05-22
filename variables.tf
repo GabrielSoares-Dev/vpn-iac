@@ -23,8 +23,8 @@ variable "ingress_rules" {
    },
     https = {
       name              = "https"
-      from_port         = 22
-      to_port           = 22
+      from_port         = 443
+      to_port           = 443
       ip_protocol       = "tcp"
    },
    first_custom_tcp = {
