@@ -20,3 +20,8 @@ resource "aws_iam_role_policy_attachment" "openvpn_instance_ssm_policy" {
   role       = aws_iam_role.openvpn_instance_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
+
+resource "aws_iam_role_policy_attachment" "openvpn_instance_ssm_policy" {
+  role       = aws_iam_role.openvpn_instance_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+}
